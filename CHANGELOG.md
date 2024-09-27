@@ -1,5 +1,31 @@
 # Changelog
 
+## 4.0.0 (2024-09-27)
+
+Full Changelog: [v3.1.0...v4.0.0](https://github.com/cloudflare/cloudflare-go/compare/v3.1.0...v4.0.0)
+
+### ⚠ BREAKING CHANGES
+
+* **api:** move event notifications under r2 ([#3249](https://github.com/cloudflare/cloudflare-go/issues/3249))
+* **url_scanner:** move list method under `scans` ([#3248](https://github.com/cloudflare/cloudflare-go/issues/3248))
+
+### Features
+
+* **api:** move event notifications under r2 ([#3249](https://github.com/cloudflare/cloudflare-go/issues/3249)) ([3859153](https://github.com/cloudflare/cloudflare-go/commit/3859153d2b92314b761a615da5f04f2ed54a2e3a))
+* **api:** OpenAPI spec update via Stainless API ([#3244](https://github.com/cloudflare/cloudflare-go/issues/3244)) ([dedf25f](https://github.com/cloudflare/cloudflare-go/commit/dedf25f7d571ccb0d335731616a0f5d9ccf38413))
+* **api:** OpenAPI spec update via Stainless API ([#3246](https://github.com/cloudflare/cloudflare-go/issues/3246)) ([55439ca](https://github.com/cloudflare/cloudflare-go/commit/55439ca0e58bcfe6daa31e3325a648d3b55df176))
+* **api:** OpenAPI spec update via Stainless API ([#3251](https://github.com/cloudflare/cloudflare-go/issues/3251)) ([00d2062](https://github.com/cloudflare/cloudflare-go/commit/00d2062d6fec5dfc9a4e2f58de707b697299d694))
+* **api:** OpenAPI spec update via Stainless API ([#3252](https://github.com/cloudflare/cloudflare-go/issues/3252)) ([e5ba0f9](https://github.com/cloudflare/cloudflare-go/commit/e5ba0f9535450e102fe6781a2f832e62c5dcafa9))
+* **api:** OpenAPI spec update via Stainless API ([#3253](https://github.com/cloudflare/cloudflare-go/issues/3253)) ([6bbfe79](https://github.com/cloudflare/cloudflare-go/commit/6bbfe797548cc1554db5e3d040ef8b63a7e8cf57))
+* **api:** OpenAPI spec update via Stainless API ([#3254](https://github.com/cloudflare/cloudflare-go/issues/3254)) ([979b0ea](https://github.com/cloudflare/cloudflare-go/commit/979b0eabccb929e2605f2fcb7ef0f3cc360d573c))
+* **api:** OpenAPI spec update via Stainless API ([#3255](https://github.com/cloudflare/cloudflare-go/issues/3255)) ([33e41fb](https://github.com/cloudflare/cloudflare-go/commit/33e41fb97a9b28ab16bc942b7b1ba4bbd77ce105))
+* **url_scanner:** move list method under `scans` ([#3248](https://github.com/cloudflare/cloudflare-go/issues/3248)) ([e9deafb](https://github.com/cloudflare/cloudflare-go/commit/e9deafb1ad52c756c3c4f0e1d108941a05969dd3))
+
+
+### Chores
+
+* **internal:** codegen related update ([#3247](https://github.com/cloudflare/cloudflare-go/issues/3247)) ([e90044e](https://github.com/cloudflare/cloudflare-go/commit/e90044e948631047fd6e7a11537777ce4fbda20a))
+
 ## 3.1.0 (2024-09-24)
 
 Full Changelog: [v3.0.0...v3.1.0](https://github.com/cloudflare/cloudflare-go/compare/v3.0.0...v3.1.0)
