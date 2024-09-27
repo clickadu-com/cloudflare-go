@@ -304,6 +304,7 @@ type zoneSubscriptionRatePlanPayload struct {
 	RatePlan struct {
 		ID string `json:"id"`
 	} `json:"rate_plan"`
+	Frequency string `json:"frequency"`
 }
 
 type GetZoneSettingParams struct {
@@ -584,13 +585,14 @@ func (api *API) ZoneSetVanityNS(ctx context.Context, zoneID string, ns []string)
 
 // ZoneSetPlan sets the rate plan of an existing zone.
 //
-// Valid values for `planType` are "CF_FREE", "CF_PRO", "CF_BIZ" and
-// "CF_ENT".
+// Valid values for `planType` are "CF_FREE", "CF_PRO", "CF_BIZ" and "CF_ENT".
+// Valid values for `frequency` are "monthly", "yearly".
 //
 // API reference: https://api.cloudflare.com/#zone-subscription-create-zone-subscription
-func (api *API) ZoneSetPlan(ctx context.Context, zoneID string, planType string) error {
+func (api *API) ZoneSetPlan(ctx context.Context, zoneID string, planType string, frequency string) error {
 	zonePayload := zoneSubscriptionRatePlanPayload{}
 	zonePayload.RatePlan.ID = planType
+	zonePayload.Frequency = frequency
 
 	uri := fmt.Sprintf("/zones/%s/subscription", zoneID)
 
@@ -604,13 +606,14 @@ func (api *API) ZoneSetPlan(ctx context.Context, zoneID string, planType string)
 
 // ZoneUpdatePlan updates the rate plan of an existing zone.
 //
-// Valid values for `planType` are "CF_FREE", "CF_PRO", "CF_BIZ" and
-// "CF_ENT".
+// Valid values for `planType` are "CF_FREE", "CF_PRO", "CF_BIZ" and "CF_ENT".
+// Valid values for `frequency` are "monthly", "yearly".
 //
 // API reference: https://api.cloudflare.com/#zone-subscription-update-zone-subscription
-func (api *API) ZoneUpdatePlan(ctx context.Context, zoneID string, planType string) error {
+func (api *API) ZoneUpdatePlan(ctx context.Context, zoneID string, planType string, frequency string) error {
 	zonePayload := zoneSubscriptionRatePlanPayload{}
 	zonePayload.RatePlan.ID = planType
+	zonePayload.Frequency = frequency
 
 	uri := fmt.Sprintf("/zones/%s/subscription", zoneID)
 
